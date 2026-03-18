@@ -31,6 +31,10 @@ class BaseModel(abc.ABC):
 
 class RestNet50Model(BaseModel):
     def __init__(self):
+<<<<<<< HEAD
+=======
+        super().__init__()
+>>>>>>> 78d120d (修复 httpx 客户端关闭问题及添加 super 调用)
         self.test_transforms = transforms.Compose(
             [
                 transforms.Resize(224),
@@ -80,6 +84,10 @@ class RestNet50Model(BaseModel):
 
 class YOLOV11Model(BaseModel):
     def __init__(self):
+<<<<<<< HEAD
+=======
+        super().__init__()
+>>>>>>> 78d120d (修复 httpx 客户端关闭问题及添加 super 调用)
         self.model = YOLO(str(Path(__file__).parent / "models/yolo11x-cls_nsfw.pt"))
 
     def predict(self, image: Image.Image) -> dict:
